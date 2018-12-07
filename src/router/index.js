@@ -1,10 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
-import HelloWorld from "@/components/HelloWorld";
-import dhf from "@/components/dhf";
-import element from "@/components/elment";
-import qform from "@/components/qform";
-import notFound from "@/components/common/notFound";
+// import HelloWorld from "@/components/HelloWorld";
+// import dhf from "@/components/dhf";
+// import element from "@/components/elment";
+// import qform from "@/components/qform";
+// import notFound from "@/components/common/notFound";
+const _import = require('./import-' + process.env.NODE_ENV)
+const notFound = _import('common/notFound')
+const qform = _import('qform')
+const element = _import('elment')
+const dhf = _import('dhf')
+const HelloWorld = _import('HelloWorld')
 import userRoute from "./compute"
 Vue.use(Router);
 
