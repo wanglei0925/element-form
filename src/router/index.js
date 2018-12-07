@@ -4,6 +4,8 @@ import HelloWorld from "@/components/HelloWorld";
 import dhf from "@/components/dhf";
 import element from "@/components/elment";
 import qform from "@/components/qform";
+import notFound from "@/components/common/notFound";
+import userRoute from "./compute"
 Vue.use(Router);
 
 export default new Router({
@@ -18,6 +20,7 @@ export default new Router({
       name: "dhf",
       component: dhf
     },
+    userRoute,
     {
       path: "/qform",
       name: "qform",
@@ -32,6 +35,11 @@ export default new Router({
       path: "",
       redirect: "/"
     },
-    { path: "*", redirect: "/" }
+    {
+      path:'/notFound',
+      name:'notFound',
+      component:notFound
+    },
+    { path: "*", redirect: "/notFound" }
   ]
 });

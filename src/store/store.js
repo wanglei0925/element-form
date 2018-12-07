@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import userStore from './user';
 Vue.use(Vuex)
 const state = {
     flag: false,
@@ -25,5 +26,8 @@ export const store = new Vuex.Store({
     state,
     getters,
     actions,
-    mutations
+    mutations,
+    modules: {
+        userStore,
+    }
 })
