@@ -41,6 +41,7 @@
             ],
             domains:[
                  { required: true, message: '请输入域名', trigger: 'blur' },
+                 { pattern: /^[a-zA-Z\u4e00-\u9fa5]+$/, message: '仅支持中英文' }
             ]
         }
       };
